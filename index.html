@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' https: 'unsafe-inline'; script-src 'self' 'unsafe-inline'">
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <title>LanHuHuHu</title>
+  <style>
+    .basic-image-label {
+      top: -26px;
+      display: inline-block;
+      position: absolute;
+    }
+
+    button,input {
+      margin-right: 5px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      word-break: break-all;
+      margin: 0;
+      padding: 16px;
+    }
+
+    *,
+    :after,
+    :before {
+      box-sizing: border-box;
+    }
+    #goto-input {
+      width: 420px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="login-container">
+      <label for="username">用户名：</label><input id="username" type="text" value="">
+      <label for="password">密码: </label><input id="password" type="password" value="">
+      <button id="btn">登录</button><button id="new-window-btn">窗口</button>
+    </div>
+    <div id="goto-container">
+      <label for="goto-input">地址：</label><input id="goto-input" type="text" value=''><button id="goto-btn">前往</button>
+    </div>
+    <div id="error-box"></div>
+    <div id="teams-container">
+      <h1 id="teams-title"></h1>
+      <div id="teams"></div>
+    </div>
+
+    <div id="folders-container">
+      <h1 id="folders-title"></h1>
+      <div id="folders"></div>
+    </div>
+
+    <div id="projects-container">
+      <h1 id="projects-title"></h1>
+      <div id="projects"></div>
+    </div>
+
+    <div id="images-container">
+      <h1 id="images-title"></h1>
+      <div id="images"></div>
+    </div>
+  </div>
+
+
+  <!-- You can also require other files to run in this process -->
+  <script src="./renderer.js"></script>
+</body>
+
+</html>
